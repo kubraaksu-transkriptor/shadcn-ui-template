@@ -1,13 +1,13 @@
-import "@/styles/globals.css"
-import { Metadata } from "next"
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/providers"
-import { SiteFooter } from "@/components/site-footer"
-import { SiteHeader } from "@/components/site-header"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { Toaster as DefaultToaster } from "@/components/ui/toaster"
+import "@/styles/globals.css";
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/providers";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { Toaster as DefaultToaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
@@ -62,10 +62,10 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -86,9 +86,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             disableTransitionOnChange
           >
             <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
+              {/* <SiteHeader /> */}
               <div className="flex-1">{children}</div>
-              <SiteFooter />
+              {/* <SiteFooter /> */}
             </div>
             <TailwindIndicator />
           </ThemeProvider>
@@ -96,5 +96,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </body>
       </html>
     </>
-  )
+  );
 }
